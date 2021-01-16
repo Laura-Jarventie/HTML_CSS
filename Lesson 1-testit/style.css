@@ -1,7 +1,7 @@
 body {
   background-color: pink;
 }
-p {
+.green {
   color: green;
 }
 .blue {
@@ -19,10 +19,12 @@ p {
   color: red;
 }
 
-.CIRCLE {
-  background-color: brown;
-  height: 200px;
-  width: 200px;
+.circle {
+  background-color: orange;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 /* KOMMENTTI */
