@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: turquoise;
+  color: azure;
+  background-image: url("https://source.unsplash.com/y5V4oCR0cAA/300x200");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+header {
+  font-size: 50px;
+  background-color: thistle;
+}
+
+a {
+  color: tomato;
+  text-decoration: none;
+}
+
+img {
+  float: left;
+}
+/* ei onnistunut, miksi?  */
+section {
+  clear: both;
+}
+
+.container {
+  max-width: 800px;
+  background-color: green;
+  margin: 0;
+}
+
+li {
+  display: inline;
+}
+/* jotain tapahtui listoille välillä, toimi aiemmin */
+ul {
+  list-style-type: none;
+  background-color: ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 50px;
+}
+
+.box1 {
+  background-color: teal;
+  border: 10px solid yellow;
+  border-top: groove;
+  border-right: dotted;
+  border-bottom: dashed;
+  bottom-left: solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.box2 {
+  background-color: rgb(128, 77, 0);
+  border: 10px solid yellow;
+  border-top: groove;
+  border-right: dotted;
+  border-bottom: dashed;
+  bottom-left: solid;
+  border-radius: 20px;
+  padding: 10px 20px 10px 10px;
+  /* pdadding menee järjesty top right bottom left, sen sijaan et kirjottain jokaisin erikseen eism padding-top, jos kirjottaa vain padding ottaa kaikki, jos kaks nro niin eka arvo on top+bottom sama ja toka arvo left-right sama */
+}
+
+.box3 {
+  background-color: rgb(214, 150, 55);
+  border: 10px solid rgb(0, 255, 55);
+  border-style: groove;
+  padding-left: 10px;
+}
+.box4 {
+  background-color: rgb(98, 27, 179);
+  border: 20px double rgb(184, 42, 108);
+  border-top: groove;
+  border-right: dotted;
+  border-bottom: dashed;
+  bottom-left: solid;
+  border-radius: 50%;
+}
