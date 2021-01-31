@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(80, 158, 158);
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  color: coral;
+  text-decoration: none;
+}
+
+/*with below you can change the text font inside the inputs, buttons etc*/
+input,
+textarea,
+button {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 300px;
+  height: 580px;
+  margin: 60px;
+  background-color: rgb(235, 243, 243);
+  border: 5px solid rgb(241, 241, 221);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/*to get some space between blocs*/
+.first {
+  margin-bottom: 20px;
+}
+
+main .container {
+  display: block;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/*to make the boxes bigger and center*/
+main .container .first input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a4a4a4;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+main .container form button {
+  width: 100%;
+  background-color: coral;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+footer {
+  font-size: 14px;
+  margin-left: 80px;
+  color: aliceblue;
+}
