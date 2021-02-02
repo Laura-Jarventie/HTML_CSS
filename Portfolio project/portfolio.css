@@ -23,14 +23,21 @@ main {
 
 header {
   font-size: 20px;
-  background-color: #30d6cc;
   text-align: center;
   padding: 10px;
   color: #343434;
-  height: 150px;
+  height: 400px;
+  background-image: url(https://source.unsplash.com/IBEXUZBmlXg/200x200);
 }
 
-.Hero-banner {
+div.fixed {
+  position: fixed;
+  top: 0;
+  background-color: #30d6cc;
+  width: 1000px;
+}
+
+div.Hero-banner {
   height: 300px;
   text-align: vertical-center;
   margin-top: 100px;
