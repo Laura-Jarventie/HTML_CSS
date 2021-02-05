@@ -1,0 +1,24 @@
+body {
+  background-color: cadetblue;
+}
+
+@media (max-width: 992px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: rgb(228, 25, 177);
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    background-color: rgb(19, 134, 29);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */media only screen and (max-width: 600px) {​​}​​/* Small devices (portrait tablets and large phones, 600px and up) */media only screen and (min-width: 600px) {​​}​​/* Medium devices (landscape tablets, 768px and up) */media only screen and (min-width: 768px) {​​}​​/* Large devices (laptops/desktops, 992px and up) */media only screen and (min-width: 992px) {​}​​/* Extra large devices (large laptops and desktops, 1200px and up) */media only screen and (min-width: 1200px) {​​...}​​
+*/
