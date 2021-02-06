@@ -7,19 +7,18 @@
 body {
   color: #343434;
   font-family: "Noto Serif", sans-serif;
-  line-height: 2;
-  max-width: 1200px;
+  line-height: 1.5;
   position: relative;
   background-color: #f8eada;
 }
 @media (max-width: 768px) {
   body {
-    background-color: blue;
+    background-color: rgb(61, 129, 150);
   }
 }
 @media (max-width: 568px) {
   body {
-    background-color: red;
+    background-color: rgb(211, 113, 21);
   }
 }
 
@@ -28,54 +27,55 @@ a {
 }
 
 header {
-  font-size: 1em;
-  text-align: center;
-  padding: 10px;
+  display: flex;
+  padding: 1rem;
   color: #343434;
-  height: 400px;
-  background-image: url(https://source.unsplash.com/IBEXUZBmlXg/200x200);
-  position: relative;
+  background: url("https://source.unsplash.com/ebHCU8n7G38") no-repeat center
+    center/cover;
 }
 
-div.fixed {
+.logo {
   position: fixed;
-  margin-left: 0px;
-  top: 0;
   background-color: #30d6cc;
-  width: 1000px;
+  width: 100vw;
+  justify-content: space-between;
+  display: flex;
 }
 
-div.Hero-banner {
-  height: 300px;
-  text-align: center, center;
-  margin-top: 4em;
+#Hero-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  text-align: center center;
 }
 
 li {
-  display: inline;
-  margin: 20px 20px;
+  display: inline-block;
+  padding: 1rem;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 50px;
-  padding: 50px;
-  text-align: center;
-}
-
 section {
-  margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 
-img.past {
-  float: left;
+.box {
+  background-color: rgb(146, 179, 58);
+  padding: 1rem;
+  width: 30%;
+  margin: 1rem;
+  box-shadow: 10px 10px 10px grey;
+}
+
+img.present {
+  float: right;
   margin: 20px;
 }
 
@@ -84,19 +84,10 @@ img.future {
   margin: 20px;
 }
 
-img.present {
-  float: right;
-  margin: 20px;
-}
-
 footer {
   text-align: center;
   margin: 20px;
   font-size: 15px;
-}
-
-input {
-  margin-right: 20px;
 }
 
 button {
