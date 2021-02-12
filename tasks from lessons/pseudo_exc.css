@@ -1,0 +1,85 @@
+body {
+  color: red;
+  font-size: 1.2rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+p {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  background-color: green;
+}
+
+li:first-child {
+  background-color: indianred;
+}
+
+li:last-child {
+  background-color: lawngreen;
+}
+
+li:nth-child(3) {
+  background-color: lemonchiffon;
+}
+
+li:nth-child(even) {
+  background-color: lightseagreen;
+}
+
+li:nth-child(3n) {
+  background-color: maroon;
+}
+
+/* starts from row nro 4 and after that every second line will be blue */
+li:nth-child(2n + 4) {
+  background-color: midnightblue;
+}
+
+button::before {
+  content: "Here is invisible";
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: olive;
+}
+
+section {
+  height: 25vh;
+  background: url(https://source.unsplash.com/IBEXUZBmlXg)
+  no-repeat
+  fixed center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+section::after {
+    content:"";
+    background-color:orange
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+section h3 {
+    z-index: 1;
+    color: white;
+}

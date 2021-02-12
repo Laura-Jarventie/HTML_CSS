@@ -1,91 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio project for school to excercise basic html, css and javascript"
-    />
-    <meta name="author" content="Laura Järventie" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <i class="fas fa-bars"></i> HAMBURGER MENU -->
-    <link rel="stylesheet" href="portfolio.css" />
-    <title>Portfolio</title>
-  </head>
 
-  <body>
-    <header>
-      
-      <div class="logo"
-      <h1> Laura Järventie</h1>
-    
-      <nav>
-        <ul>
-          <li><a href="#Past">Past</a></li>
-          <li><a href="#Present">Present</a></li>
-          <li><a href="#Future">Future</a></li>
-        </ul>
-        <a href="#contactMe">Contact me</a>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio project for school to excercise basic html, css and javascript" />
+  <meta name="author" content="Laura Järventie" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet" />
+  <!-- <i class="fas fa-bars"></i> HAMBURGER MENU -->
+  <link rel="stylesheet" href="portfolioNew.css" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav id="header">
+      <h1>Laura Järventie</h1>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contactMe">Contact me</a></li>
+      </ul>
+    </nav>
+
+    <div id="Hero-banner">
+      <h2>WELCOME TO MY PORTFOLIO</h2>
     </div>
-      <div id="Hero-banner">
-        
-        <h2>WELCOME TO MY PORTFOLIO</h2>
-       
-      </div>
-    </header>
-    <main>
-      <section id="past">
-        <h3>PAST</h3>
-        <div class="box">
-          <img src="https://pxhere.com/en/photo/43885"
-          alt="turtle"/>
-          <h3>Lorem ipsum dolor</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-            ut dolores dolore architecto blanditiis optio deserunt quidem, nobis
-            iste, suscipit tenetur porro! Fuga a dolores rem possimus
-            dignissimos dolorum veniam!
-          </p>
-          <a href="#">read more</a>
+  </header>
+  <main>
+    <section id="work">
+    <div class="container">
+      <h2>WORK</h2>
+        <div class="work_boxes">
+          <div class="box">
+            <img src="https://source.unsplash.com/IBEXUZBmlXg/200x200" alt="turtle" />
+            <h3>Lorem ipsum dolor</h3>
+            <a href="#">read more</a>
+          </div>
+
+          <div class="box">
+            <img src="https://source.unsplash.com/IBEXUZBmlXg/200x200" alt="turtle" />
+            <h3>Lorem ipsum dolor</h3>
+            <a href="#">read more</a>
+          </div>
+          <div class="box">
+            <img src="https://source.unsplash.com/IBEXUZBmlXg/200x200" alt="turtle" />
+            <h3>Lorem ipsum dolor</h3>
+            <a href="#">read more</a>
+          </div>
         </div>
-        <div class="box">
-          <img src="https://source.unsplash.com/IBEXUZBmlXg/200x200"
-          alt="turtle"/>
-          <h3>Lorem ipsum dolor</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-            ut dolores dolore architecto blanditiis optio deserunt quidem, nobis
-            iste, suscipit tenetur porro! Fuga a dolores rem possimus
-            dignissimos dolorum veniam!
-          </p>
-          <a href="#">read more</a>
-        </div>
-        <div class="box">
-          <img src="https://source.unsplash.com/IBEXUZBmlXg/200x200"
-          alt="turtle"/>
-          <h3>Lorem ipsum dolor</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-            ut dolores dolore architecto blanditiis optio deserunt quidem, nobis
-            iste, suscipit tenetur porro! Fuga a dolores rem possimus
-            dignissimos dolorum veniam!
-          </p>
-          <a href="#">read more</a>
-        </div>
-      </section>
-      <section id="Present">
-        <h3>PRESENT</h3>
-        <img
-          class="present"
-          src="https://source.unsplash.com/IBEXUZBmlXg/200x200"
-          alt="turtle"
-        />
+    </div>
+    </section>
+    <div class="container">
+      <section id="experience">
+        <h2>EXPERIENCE</h2>
+        <img class="experience" src="https://source.unsplash.com/IBEXUZBmlXg/200x140" alt="turtle" />
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt magni
           assumenda nostrum asperiores quisquam cumque labore rem voluptatum ab
@@ -99,14 +70,12 @@
           pariatur sed error maxime cupiditate a amet iusto quod. Similique
           possimus quibusdam esse repellendus beatae commodi non.
         </p>
-      </section>
-      <section id="Future">
-        <h3>FUTURE</h3>
-        <img
-          class="future"
-          src="https://source.unsplash.com/IBEXUZBmlXg/200x200"
-          alt="turtle"
-        />
+    </div>
+    </section>
+    <div class="container">
+      <section id="skills">
+        <h2>SKILLS</h2>
+        <img class="skills" src="https://source.unsplash.com/IBEXUZBmlXg/200x200" alt="turtle" />
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt magni
           assumenda nostrum asperiores quisquam cumque labore rem voluptatum ab
@@ -120,16 +89,32 @@
           pariatur sed error maxime cupiditate a amet iusto quod. Similique
           possimus quibusdam esse repellendus beatae commodi non.
         </p>
-      </section>
-    </main>
-    <footer>COPYRIGHT</footer>
-    <p id="contactMe">Contact me:</p>
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" />
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" />
-    <label for="text">Textarea:</label>
-    <textarea cols="30" rows="5"></textarea>
-    <button type="submit">submit</button>
-  </body>
+    </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <section id="contactMe">
+    <div class="container">
+      <h2>Contact me:</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+          <div class="form-group">
+            <label for="email">Your email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+            <div class="form-group">
+              <label for="message">Message me</label>
+              <textarea name="message" id="message"></textarea> 
+            </div>
+            <button type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+  </footer>
+  <script src="portfolio.js"></script>
+</body>
+
 </html>
