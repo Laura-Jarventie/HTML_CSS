@@ -47,6 +47,7 @@ p {
 h2 {
   margin: 3rem 0;
 }
+
 /* header************************************ */
 h1 {
   font-weight: 400;
@@ -83,6 +84,15 @@ li {
   align-items: center;
   height: 50vh;
   justify-content: center;
+  position: relative;
+}
+
+#Hero-banner::before {
+  content: "";
+  background-color: rgb(55 53 169 / 29%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 img {
@@ -130,6 +140,7 @@ img {
   color: #343434;
   text-decoration: none;
 }
+
 #experience {
   background-color: #fbbe7d;
 }
@@ -139,9 +150,47 @@ img.experience {
   margin: 2rem;
 }
 
-img.skills {
-  float: left;
-  margin: 2rem;
+#skills .skills_boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#skills .box {
+  background-color: white;
+  width: 32%;
+  height: 40vh;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #aeaeae;
+}
+
+#skills .box:nth-child(even) {
+  background-color: rgb(199 181 181);
+}
+
+#skills .box:hover {
+  box-shadow: 0 0 25px #8a8a8a;
+}
+
+#skills .box h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#skills a {
+  color: #343434;
+  text-decoration: none;
+}
+
+#skills .box i {
+  height: 100px;
+  font-size: 50px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
 }
 
 /******footer***/
@@ -213,6 +262,16 @@ footer form button {
     width: 100%;
   }
 
+  #skills .skills_boxes {
+    display: block;
+    width: 90%;
+  }
+
+  #skills .box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
   footer form {
     width: 80%;
     text-align: left;
@@ -228,6 +287,17 @@ footer form button {
     width: 100%;
     width: 100%;
     margin: 0;
+  }
+  footer form button {
+    background-color: #fbbe7d;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem 2rem;
+    color: #343434;
+    margin-left: 50px;
+    margin-bottom: 1rem;
+    font-size: inherit;
   }
 }
 
@@ -250,7 +320,7 @@ footer form button {
     color: #333;
     text-align: center;
   }
-  #past .box h3 {
+  #work .box h3 {
     margin-bottom: 11rem;
   }
   #work,
@@ -258,21 +328,51 @@ footer form button {
   #skills {
     padding: 1rem;
   }
+
   #work .work_boxes {
     display: block;
   }
+
   #work .box {
     width: 100%;
     margin-bottom: 1rem;
   }
+
   #experience img,
   #skills img {
     width: 100%;
     float: none;
     margin: 0;
   }
+
+  #skills .skills_boxes {
+    display: block;
+    width: 90%;
+  }
+
+  #skills .box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
   footer form .form-group {
     display: flex;
     justify-content: center;
+  }
+
+  footer form button {
+    background-color: #fbbe7d;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem 2rem;
+    color: #343434;
+    margin-left: 50px;
+    margin-bottom: 1rem;
+    font-size: inherit;
+  }
+
+  #file {
+    align-items: center;
   }
 }
