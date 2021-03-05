@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio project for school to excercise basic html, css and javascript"
+    />
+    <meta name="author" content="Laura Järventie" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e22caf35d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <i class="fas fa-bars"></i> HAMBURGER MENU -->
+    <link rel="stylesheet" href="portfolioNew.css" />
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <header>
+      <nav id="header">
+        <li><a href="./portfolio_new.html">Laura Järventie</a></li>
+        <ul>
+          <li><a href="./portfolio_new.html">Work</a></li>
+          <li><a href="./portfolio_new.html">Experience</a></li>
+          <li><a href="./portfolio_new.html">Skills</a></li>
+          <li><a href="#contactMe">Contact me</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="gallery">
+        <div class="container">
+          <div class="gallery-grid">
+            <div class="grid-div grid-item-1">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/random "
+                alt="random pics from unsplash
+                       "
+              />
+            </div>
+            <div class="grid-div grid-item-2">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/random "
+                alt="random pics from unsplash
+                        "
+              />
+            </div>
+            <div class="grid-div grid-item-3">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/random "
+                alt="random pics from unsplash
+                            "
+              />
+            </div>
+            <div class="grid-div grid-item-4">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/collection/190727/1600x900"
+                alt="random pics from unsplash
+                    "
+              />
+            </div>
+            <div class="grid-div grid-item-5">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/WLUHO9A_xik/1600x900"
+                alt="random pics from unsplash"
+              />
+            </div>
+            <div class="grid-div grid-item-6">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/user/erondu/1600x900"
+                alt="random pics from unsplash
+    "
+              />
+            </div>
+            <div class="grid-div grid-item-7">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/WLUHO9A_xik/1600x900 "
+                alt="random pics from unsplash
+    "
+              />
+            </div>
+            <div class="grid-div grid-item-8">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/WLUHO9A_xik/1600x900 "
+                alt="random pics from unsplash
+    "
+              />
+            </div>
+            <div class="grid-div grid-item-9">
+              <img
+                class="grid-item"
+                src="https://source.unsplash.com/WLUHO9A_xik/1600x900 "
+                alt="random pics from unsplash
+    "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <section id="contactMe">
+        <div class="container">
+          <h2>Contact me:</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Your email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message me</label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <button type="submit">Send message</button>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+              Top
+            </button>
+            <p class="copyright">Copyright &copy; My Website 2020</p>
+          </form>
+        </div>
+      </section>
+    </footer>
+    <script src="portfolio.js"></script>
+  </body>
+</html>

@@ -1,3 +1,7 @@
+:root {
+  --font: arial;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -49,6 +53,11 @@ h2 {
 }
 
 /* header************************************ */
+#Logo {
+  font-weight: 400;
+  padding: 1rem;
+}
+
 h1 {
   font-weight: 400;
   padding: 1rem;
@@ -67,8 +76,20 @@ nav {
   justify-content: space-between;
   align-items: baseline;
   position: fixed;
-  background-color: #343434;
+  background-color: transparent;
   width: 100%;
+  z-index: 1;
+}
+
+header nav a {
+  background-color: transparent;
+  transition: background-color 5s ease-in 2s;
+}
+
+header nav a:hover {
+  background-color: rgb(170, 38, 38);
+  font-size: 2rem;
+  text-decoration: underline;
 }
 
 li {
@@ -79,6 +100,7 @@ li {
 }
 
 #Hero-banner {
+  /*text-shadow: 5px 5px 5px yellow;*/
   display: flex;
   align-content: flex-end;
   align-items: center;
@@ -193,7 +215,60 @@ img.experience {
   display: flex;
 }
 
-/******footer***/
+/*Gallery*******************************************************/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "a a b b c c"
+    "a a d d c c"
+    "e h h h c c"
+    "f h h h i i"
+    "g h h h i i";
+}
+
+.grid-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-item-1 {
+  grid-area: a;
+}
+
+.grid-item-2 {
+  grid-area: b;
+}
+
+.grid-item-3 {
+  grid-area: c;
+}
+
+.grid-item-4 {
+  grid-area: d;
+}
+
+.grid-item-5 {
+  grid-area: e;
+}
+
+.grid-item-6 {
+  grid-area: f;
+}
+
+.grid-item-7 {
+  grid-area: g;
+}
+
+.grid-item-8 {
+  grid-area: h;
+}
+
+.grid-item-9 {
+  grid-area: i;
+}
+/******footer****************************************************/
 
 footer {
   text-align: center;
@@ -207,7 +282,7 @@ footer .copyright {
   font-size: 12px;
 }
 
-/********footer form ***/
+/********footer form *************************************************/
 
 footer form {
   margin: 0 auto;
@@ -252,7 +327,7 @@ footer form button {
   font-size: inherit;
 }
 
-/*********TABLET MODE***************/
+/*********TABLET MODE*************************************************************/
 @media (max-width: 899px) {
   body {
     background-color: rgb(61, 129, 150);
@@ -301,7 +376,7 @@ footer form button {
   }
 }
 
-/*********Mobile*****************/
+/*********Mobile**********************************************************/
 @media (max-width: 576px) {
   body {
     background-color: rgb(211, 113, 21);
