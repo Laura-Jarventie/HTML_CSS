@@ -1,32 +1,43 @@
 let nav = document.querySelector("nav");
+let links = document.querySelectorAll("nav ul li a");
+let header = document.querySelector(".main_nav");
+let buttonBackToTop = document.getElementById("myBtn");
+let buttonMobile = document.getElementById("mobileButton");
 
-const scrollNav = () => {
+window.onscroll = function () {
+  scrollFunction();
+};
+
+const scrollFunction = () => {
   if (
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100
   ) {
-    nav.style.background = "#343434";
-    nav.style.padding = "1%";
+    header.classList.add("bg");
+    buttonBackToTop.style.display = "block";
   } else {
-    nav.style.background = "transparent";
-    nav.style.padding = "1%";
+    header.classList.remove("bg");
+    buttonBackToTop.style.display = "none";
   }
 };
 
-window.addEventListener("scroll", scrollNav);
-
-// Point is that you have bg color transp. or colored.
-
-mybutton = document.getElementById("myBtn");
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-function topFunction() {
+const getToTop = () => {
+  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+};
+
+const mobMenu = () => {
+  for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", mobMenu);
+  }
+  if (nav.classList.contains("responsive")) {
+    nav.classList.remove("responsive");
+    document.body.style.overflow = "";
+  } else {
+    nav.classList.add("responsive");
+    document.body.style.overflow = "hidden";
+  }
+};
+
+buttonBackToTop.addEventListener("click", getToTop);
+buttonMobile.addEventListener("click", mobMenu);

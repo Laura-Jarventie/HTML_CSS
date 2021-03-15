@@ -1,0 +1,106 @@
+:root {
+    --element-color: radial-gradient(blue, red);
+}
+
+body {
+  height: 100%;
+  /*rainbow colors
+  background-image: radial-gradient(
+    ellipse at center,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  */
+  background-image: linear-gradient(to left bottom, red, orange);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#card {
+    margin: 0 auto;
+    height: 300px;
+    width: 200px;
+    background-image:radial-gradient(blue, red);
+    border-radius:5px
+    display: flex
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+#card:hover {
+    box-shadow: insert 0 0 50px black;
+   /* transform: rotate(720deg); */
+    /*transform: skewX(45deg); */
+   /* transform: skewY(45deg); */
+  /* transform: scale(0.5); */
+   /* transform: scale(2); */
+  /* transform: scale(0.9); */
+ /* transform: translateY(200px); */
+ /* transform: translate(200px, 200px); */
+/* transform: translate(20px, 20px); */
+transform: translate3d();
+perspective: 200px;
+}
+
+#circle {
+background-image:var(--element-color);
+height: 100px;
+width: 100px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 200px auto;
+animation-name: example;
+animation-duration: 3s;
+animation-iteration-count: 3;
+
+
+}
+/*
+@keyframes example {
+from {
+    background: blue;
+} to {
+    background: green;
+}
+} */
+
+@keyframes example {
+    0% {
+        background: blue;
+        top: 0;
+        left: 0;
+    } 25% {
+        background: green;
+        top: 0;
+        left: 200px;
+    }
+    50% {
+        background: yellow;
+        top: 200px;
+        left: 200px;
+    }
+    90% {
+        background: violet;
+        top: 200px;
+    }
+    }
+
+    #text_1 {
+     
+        animation-name: example_text;
+    }
+
+    @keyframes example_text {
+
+    }

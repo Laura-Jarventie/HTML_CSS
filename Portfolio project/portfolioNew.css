@@ -1,5 +1,7 @@
 :root {
-  --font: arial;
+  --font: "Noto Serif", sans-serif;
+  --dark-grey: #343434;
+  --BG-color: #f1e5d5f6;
 }
 
 * {
@@ -12,8 +14,8 @@ html {
   scroll-behavior: smooth;
 }
 /***
-BG COLOR FBD8AD 50%
-TEXT 343434
+BG COLOR FBD8AD 50% en osaa laitta tuota 50% linkkien väri muutuu mustaks. miksi / ei toimi?
+TEXT #343434
 PRIMARY 30D6CC
 SECOND FBBE7D
 VAIHDA SURFFIKUVAT
@@ -22,15 +24,14 @@ VAIHDA SURFFIKUVAT
 input,
 textarea,
 button {
-  font-family: "Noto Serif", sans-serif;
+  font-family: var(--font);
 }
 
 body {
-  color: #343434;
-  font-family: "Noto Serif", sans-serif;
+  color: var(--dark-grey);
+  font-family: var(--font);
   line-height: 1.5;
-  position: relative;
-  background-color: #f8eada;
+  background-color: var(--BG-color);
 }
 
 .container {
@@ -43,75 +44,92 @@ p {
   line-height: 1.5;
 }
 
-#header a {
-  color: #f8eada;
+a {
+  color: var(--BG-color);
   text-decoration: none;
 }
 
-h2 {
-  margin: 3rem 0;
+.bg {
+  background-color: var(--dark-grey);
 }
 
 /* header************************************ */
-#Logo {
+.logo {
   font-weight: 400;
   padding: 1rem;
-}
-
-h1 {
-  font-weight: 400;
-  padding: 1rem;
+  color: var(--BG-color);
 }
 
 header {
-  justify-content: center;
-  color: #f8eada;
   background: url("https://source.unsplash.com/ebHCU8n7G38") no-repeat center
     center/cover;
-  transition: 0.2s;
 }
 
-nav {
+.main_nav {
   display: flex;
+  top: 0;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   position: fixed;
-  background-color: transparent;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
+  
 }
 
 header nav a {
+  color: var(--BG-color);
   background-color: transparent;
-  transition: background-color 5s ease-in 2s;
+  transition: font-size 0.4s;
 }
 
-header nav a:hover {
-  background-color: rgb(170, 38, 38);
-  font-size: 2rem;
-  text-decoration: underline;
-}
-
-li {
-  display: flex;
-  justify-content: flex-end;
-  display: inline-block;
+.main_nav .container {
+  position: relative;
   padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mobileButton {
+  display: none;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+header nav li:hover {
+  font-size: 2rem;
+  transition: 0.2s;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--BG-color);
+}
+
+header .logo a {
+  font-size: 1.5rem;
 }
 
 #Hero-banner {
   /*text-shadow: 5px 5px 5px yellow;*/
   display: flex;
-  align-content: flex-end;
   align-items: center;
-  height: 50vh;
+  height: 100vh;
   justify-content: center;
-  position: relative;
+  
 }
 
 #Hero-banner::before {
   content: "";
-  background-color: rgb(55 53 169 / 29%);
+  /*background-color: rgb(55 53 169 / 29%);*/
   height: 100%;
   width: 100%;
   position: absolute;
@@ -119,6 +137,12 @@ li {
 
 img {
   width: 200px;
+}
+
+h1 {
+  color: var(--BG-color);
+  font-weight: 300;
+  font-size: 3rem;
 }
 
 /***********main area******/
@@ -159,7 +183,7 @@ img {
 }
 
 #work a {
-  color: #343434;
+  color: var(--dark-grey);
   text-decoration: none;
 }
 
@@ -201,7 +225,7 @@ img.experience {
 }
 
 #skills a {
-  color: #343434;
+  color: var(--dark-grey);
   text-decoration: none;
 }
 
@@ -209,13 +233,47 @@ img.experience {
   height: 100px;
   font-size: 50px;
   object-fit: cover;
-  margin-bottom: 2rem;
+  margin-bottom: -1rem;
   justify-content: center;
   text-align: center;
   display: flex;
 }
+progress[value] {
+  height: 25px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
 
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background: var(--dark-grey);
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
 /*Gallery*******************************************************/
+
+header nav li {
+  list-style-type: none;
+
+}
+
+#header {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-grey);
+  height: 20vh;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -272,7 +330,7 @@ img.experience {
 
 footer {
   text-align: center;
-  background-color: #343434;
+  background-color: var(--dark-grey);
   color: #f8eada;
   padding: 8px;
 }
@@ -291,15 +349,14 @@ footer form {
 }
 
 footer form .form-group {
-  margin: 1rem 0;
+  margin: 2rem 0;
   display: flex;
 }
 
 footer form label {
   width: 200px;
   display: inline-block;
-  text-align: right;
-  margin-right: 2rem;
+  text-align: left;
 }
 
 footer form .form-group input,
@@ -315,16 +372,28 @@ footer form .form-group textarea {
   min-height: 100px;
 }
 
-footer form button {
+footer button {
   background-color: #fbbe7d;
   text-transform: uppercase;
   border-radius: 5px;
   border: none;
   padding: 1rem 2rem;
-  color: #343434;
-  margin-left: 50px;
+  color: var(--dark-grey);
+  margin-left: 230px;
   margin-bottom: 1rem;
   font-size: inherit;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-color: var(--dark-grey);
+  border-style: solid;
+}
+
+.material-icons {
+  font-size: 1rem;
 }
 
 /*********TABLET MODE*************************************************************/
@@ -369,7 +438,7 @@ footer form button {
     border-radius: 5px;
     border: none;
     padding: 1rem 2rem;
-    color: #343434;
+    color: var(--dark-grey);
     margin-left: 50px;
     margin-bottom: 1rem;
     font-size: inherit;
@@ -379,18 +448,42 @@ footer form button {
 /*********Mobile**********************************************************/
 @media (max-width: 576px) {
   body {
-    background-color: rgb(211, 113, 21);
+    background-color: var(--BG-color);
+  }
+  #mobileButton {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: var(--BG-color);
+   
   }
   .main_nav {
     display: block;
   }
   header nav ul {
     margin-top: 1rem;
+    display: none;
+  }
+  nav.responsive ul {
+    display: block;
+    background-color: var(--dark-grey);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 86px;
+  }
+  nav.responsive ul li {
+    display: block;
+  }
+
+  nav.responsive ul li a {
+    display: block;
+    padding: 1rem 2rem;
   }
   header nav ul li {
     padding: 1rem;
   }
-  #hero-banner h2 {
+  #hero-banner h1 {
     font-size: 2rem;
     color: #333;
     text-align: center;
@@ -441,7 +534,7 @@ footer form button {
     border-radius: 5px;
     border: none;
     padding: 1rem 2rem;
-    color: #343434;
+    color: var(--dark-grey);
     margin-left: 50px;
     margin-bottom: 1rem;
     font-size: inherit;
@@ -451,3 +544,6 @@ footer form button {
     align-items: center;
   }
 }
+
+/*******Animation****/
+

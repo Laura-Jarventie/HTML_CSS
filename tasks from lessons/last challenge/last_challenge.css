@@ -1,0 +1,215 @@
+body {
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(236, 222, 21, 0.966),
+    rgb(151, 21, 21)
+  );
+  background-size: 200%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation: moving_background 15s ease infinite;
+}
+
+  @keyframes moving_background  {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.circle {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  position: relative;
+  transition: all 1s;
+}
+
+.circle:hover {
+  transform: scale(2);
+  background-color: blue;
+}
+
+.rectangle {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  margin: 50px;
+  transition: all 1s;
+}
+
+.rectangle:hover {
+  transform: rotate(180deg);
+  background-color: purple;
+}
+
+.rectangle_smaller {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  margin: 50px;
+  transition: all 1s;
+  color: yellow;
+}
+
+.rectangle_smaller:hover {
+  transform: scale(0.7);
+  color: black;
+}
+
+h1 {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  text-align: left;
+}
+.underline h1::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  display: block;
+  background: black;
+  transition: 1s ease-in all;
+}
+
+.underline:hover h1::after {
+  width: 100%;
+}
+
+.borders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  background-color: rgb(0, 204, 255);
+  position: relative;
+}
+
+/* TOP side */
+.borders::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 200px;
+  border-top: 5px solid black;
+  transition: all 1s;
+}
+
+.borders:hover::before {
+  right: 0;
+}
+/* Right side */
+
+.borders::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-right: 5px solid black;
+  transition: all 1s;
+}
+
+.borders:hover::after {
+  top: 0;
+}
+
+/* Bottom side */
+
+.borders h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 200px;
+  right: 0;
+  border-bottom: 5px solid black;
+  transition: all 1s;
+}
+
+.borders:hover h3::before {
+  left: 0;
+}
+
+/* Left side */
+
+.borders h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  border-left: 5px solid black;
+  transition: all 1s;
+}
+
+.borders:hover h3::after {
+  bottom: 0;
+}
+
+.moving_circle {
+  background-color: rgb(25, 12, 211);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 50px;
+  position: relative;
+  transition: 1s;
+  animation-name: bouncing;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+}
+
+@keyframes bouncing {
+  0% {
+    background: blue;
+    top: 0;
+    left: 0;
+  }
+  10% {
+    background: green;
+    top: 0;
+    left: 200px;
+    border-radius: 30%;
+  }
+  50% {
+    background: yellow;
+    top: 200px;
+    left: 200px;
+    border-radius: 10%;
+  }
+  90% {
+    background: pink;
+    top: 200px;
+    left: 0;
+    border-radius: 1%;
+  }
+  100% {
+    background: orange;
+    top: 0;
+    left: 0;
+  }
+}
+
+.moving_circle:hover {
+  animation-play-state: paused;
+}

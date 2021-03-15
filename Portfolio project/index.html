@@ -13,32 +13,45 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/e22caf35d5.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <i class="fas fa-bars"></i> HAMBURGER MENU -->
+
     <link rel="stylesheet" href="portfolioNew.css" />
     <title>Portfolio</title>
   </head>
 
   <body>
     <header>
-      <nav id="header">
-        <div><a href="./portfolio_new.html">Laura Järventie</a></div>
-        <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contactMe">Contact me</a></li>
-          <li><a href="./gallery.html">Gallery</a></li>
-        </ul>
-      </nav>
-
-      <div id="Hero-banner">
-        <h1>WELCOME TO MY PORTFOLIO</h1>
+      <div class="main_nav">
+        <div class="container">
+          <div class="logo"><a href="./index.html">Laura Järventie</a></div>
+          <nav>
+            <button id="mobileButton">
+              <span class="material-icons">menu</span>
+            </button>
+            <ul>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#footer">Contact me</a></li>
+              <li><a href="./gallery.html">Gallery</a></li>
+              <li><a href="./animation.html">Animation</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+
+      <section id="Hero-banner">
+        <h1>WELCOME TO MY PORTFOLIO</h1>
+      </section>
     </header>
+
     <main>
       <section id="work">
         <div class="container">
@@ -103,48 +116,46 @@
               <i class="fab fa-git-alt"></i>
 
               <h3>HTML</h3>
-              <label for="file"></label>
-              <progress id="file" value="1" max="10">10%</progress>
+
+              <progress id="HTMLfile" value="1" max="10">10%</progress>
             </div>
             <div class="box">
               <i class="fab fa-artstation"></i>
               <h3>CSS</h3>
-              <progress id="file" value="1" max="10">10%</progress>
+              <progress id="CSSfile" value="1" max="10">10%</progress>
             </div>
             <div class="box">
               <i class="fas fa-file-code"></i>
               <h3>JavaScript</h3>
-              <progress id="file" value="1" max="10">10%</progress>
+              <progress id="JSfile" value="1" max="10">10%</progress>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer id="footer">
-      <section id="contactMe">
-        <div class="container">
-          <h2>Contact me:</h2>
-          <form>
-            <div class="form-group">
-              <label for="name">Your name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Your email</label>
-              <input type="email" name="email" id="email" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message me</label>
-              <textarea name="message" id="message"></textarea>
-            </div>
-            <button type="submit">Send message</button>
-            <button onclick="topFunction()" id="myBtn" title="Go to top">
-              Top
-            </button>
-            <p class="copyright">Copyright &copy; My Website 2020</p>
-          </form>
-        </div>
-      </section>
+      <div class="container">
+        <h2>Contact me:</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Your email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message me</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <button type="submit">Send message</button>
+        </form>
+        <p class="copyright">Copyright &copy; My Website 2020</p>
+      </div>
+      <button id="myBtn">
+        Top<span class="material-icons"> arrow_upward </span>
+      </button>
     </footer>
     <script src="portfolio.js"></script>
   </body>
